@@ -1,15 +1,15 @@
 ### CSS Reset / Normalize
 
-#### Das Problem
-- Jeder Browser hat eigene Standard-Styles
-- Inkonsistente Darstellung zwischen Browsern
-- Unvorhersagbare Abstände und Schriftgrößen
+#### Problem
+- Each and every browser has its own default styles
+- So we have inconsistent behaviour for different browser
+- e.g. margins, font-sizes, font-family might differ
 
 ---
 
-#### Moderner Reset Ansatz
+#### Modern CSS Reset
 
-```css
+```css[2-4]
 /* Moderner Reset */
 *, *::before, *::after {
   box-sizing: border-box;
