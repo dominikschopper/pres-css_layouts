@@ -1,12 +1,12 @@
 ## CSS Cascade - The Fundamentals
 
 **The complete Cascade order (lowest → highest priority):**
-1. User Agent styles (browser defaults) <!-- .element class="fragment highlight-green" -->
-2. User styles (user preferences) <!-- .element class="fragment highlight-green" -->
-3. Author styles (your CSS) <!-- .element class="fragment highlight-green" -->
-4. Author styles with `!important`<!-- .element class="fragment highlight-red" -->
-5. User styles with `!important`<!-- .element class="fragment highlight-red" -->
-6. User Agent styles with `!important`<!-- .element class="fragment highlight-red" -->
+1. User Agent styles (browser defaults) <!-- .element class="fragment highlight-blue" -->
+2. User styles (user preferences) <!-- .element class="fragment highlight-blue" -->
+3. Author styles (your CSS) <!-- .element class="fragment highlight-blue" -->
+4. Author <!-- .element class="fragment highlight-red" --> styles with `!important`
+5. User <!-- .element class="fragment highlight-red" --> styles with `!important`
+6. User <!-- .element class="fragment highlight-red" --> Agent styles with `!important`
 
 ---
 
