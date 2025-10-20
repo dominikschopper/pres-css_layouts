@@ -303,72 +303,72 @@ body .reveal .slides .c-palepink-light {
 }
 
 .reveal:has(.present.trennblatt.use-img-AB):before {
-        background-image: url("/assets/profiles/AB.jpg");
+        background-image: url("../../assets/profiles/AB.jpg");
 }
 
 .reveal:has(.present.trennblatt.use-img-AS):before {
-    background-image: url("/assets/profiles/AS.jpg");
+    background-image: url("../../assets/profiles/AS.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-BT):before {
-    background-image: url("/assets/profiles/BT.jpg");
+    background-image: url("../../assets/profiles/BT.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-CS):before {
-    background-image: url("/assets/profiles/CS.jpg");
+    background-image: url("../../assets/profiles/CS.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-DM):before {
-    background-image: url("/assets/profiles/DM.jpg");
+    background-image: url("../../assets/profiles/DM.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-DS):before {
-    background-image: url("/assets/profiles/DS.jpg");
+    background-image: url("../../assets/profiles/DS.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-HD):before {
-    background-image: url("/assets/profiles/HD.jpg");
+    background-image: url("../../assets/profiles/HD.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-JB):before {
-    background-image: url("/assets/profiles/MH.jpg");
+    background-image: url("../../assets/profiles/MH.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-JK):before {
-    background-image: url("/assets/profiles/JK.jpg");
+    background-image: url("../../assets/profiles/JK.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-KL):before {
-    background-image: url("/assets/profiles/KL.jpg");
+    background-image: url("../../assets/profiles/KL.jpg");
 }
 
 .reveal:has(.present.trennblatt.use-img-MH):before {
-    background-image: url("/assets/profiles/MH.jpg");
+    background-image: url("../../assets/profiles/MH.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-MK):before {
-    background-image: url("/assets/profiles/MK.jpg");
+    background-image: url("../../assets/profiles/MK.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-MT):before {
-    background-image: url("/assets/profiles/MT.jpg");
+    background-image: url("../../assets/profiles/MT.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-NB):before {
-    background-image: url("/assets/profiles/NB.jpg");
+    background-image: url("../../assets/profiles/NB.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-PS):before {
-    background-image: url("/assets/profiles/PS.jpg");
+    background-image: url("../../assets/profiles/PS.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-SD):before {
-    background-image: url("/assets/profiles/SD.jpg");
+    background-image: url("../../assets/profiles/SD.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-SK):before {
-    background-image: url("/assets/profiles/SK.jpg");
+    background-image: url("../../assets/profiles/SK.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-SM):before {
-    background-image: url("/assets/profiles/SM.jpg");
+    background-image: url("../../assets/profiles/SM.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-SOK):before {
-    background-image: url("/assets/profiles/SOK.jpg");
+    background-image: url("../../assets/profiles/SOK.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-TP):before {
-    background-image: url("/assets/profiles/TP.jpg");
+    background-image: url("../../assets/profiles/TP.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-VP):before {
-    background-image: url("/assets/profiles/VP.jpg");
+    background-image: url("../../assets/profiles/VP.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-YW):before {
-    background-image: url("/assets/profiles/YW.jpg");
+    background-image: url("../../assets/profiles/YW.jpg");
 }
 
 
@@ -385,10 +385,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
     right: 15px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url(/assets/logo-trans.svg);
+    background-image: url(../../assets/logo-trans.svg);
 }
 .reveal:has(.present.trennblatt-orange)::after {
-    background-image: url(/assets/logo-trans_white.svg);
+    background-image: url(../../assets/logo-trans_white.svg);
 }
 /*********************************************
  * GLOBAL STYLES
