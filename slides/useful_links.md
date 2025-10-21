@@ -24,7 +24,7 @@
 
 ---
 
-## Container Queries - The Highlight
+## Container Queries No.1
 
 **Kevin Powell Videos:**
 - 🎯 [Container Queries Are Going to Be a Game Changer](https://www.classcentral.com/course/youtube-container-queries-are-going-to-be-a-game-changer-160424)
@@ -36,6 +36,10 @@
 - 🌟 [CSS Containment Level 3 Specification](https://www.miriamsuzanne.com/specs/contain-3/) - Official Spec
 - [Intrinsic CSS with Container Queries](https://www.miriamsuzanne.com/speaking/queries-units/)
 - [W3C Developer Meetup 2022 - Container Queries Talk](https://www.w3.org/2022/09/meetup/speaker-miriam.html)
+
+---
+
+## Container Queries No.2
 
 **Josh Comeau Container Query Articles:**
 - [Container Queries Are Here](https://www.joshwcomeau.com/css/container-queries-introduction/)
@@ -98,8 +102,11 @@
 
 ---
 
-### Can I Use
-- [Container Queries](https://caniuse.com/css-container-queries) - 84% support
-- [CSS :has()](https://caniuse.com/css-has) - 87% support
-- [CSS @layer](https://caniuse.com/css-cascade-layers) - 89% support
-- [CSS Nesting](https://caniuse.com/css-nesting) - 79% support
+### Can I Use for the features we have shown
+
+in short: all major browsers support it nowadays!
+
+- [Container Queries](https://caniuse.com/css-container-queries) &rarr; 84% support
+- [CSS :has()](https://caniuse.com/css-has) &rarr; 87% support
+- [CSS @layer](https://caniuse.com/css-cascade-layers) &rarr; 89% support
+- [CSS Nesting](https://caniuse.com/css-nesting) &rarr; 79% support
