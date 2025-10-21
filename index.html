@@ -11,7 +11,7 @@
     <!-- theme goes here -->
     <link rel="stylesheet" href="dist/theme/cofinpro.css" id="theme">
     <!-- code highlighting -->
-    <link rel="stylesheet" href="./plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="./plugin/highlight/idea.css">
 </head>
 
 <body>
@@ -21,69 +21,104 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section class="trennblatt trennblatt-orange use-img use-img-MH">
-                    <h1>Tech@ Modern CSS for our Projects
+                    <h1>
+                        Tech@ Modern<br />
+                        CSS for our Projects
                         <p style="text-transform: none; font-size:0.75em" class="fragment">
-                            Why we want to talk about CSS!
+                            How working with CSS<br />
+                            can be easier!
                         </p>
                     </h1>
             </section>
             <section>
-
                 <section>
                     <h2>Our own state of CSS</h2>
                     <h3 class="fragment c-blue">Nobody likes CSS<sup class="c-orange">*</sup><br />
                     <span class="fragment">... but we use it "everywhere"<sup class="c-orange">*</sup></span></h3>
                     <ul>
                         <li class="fragment">
-                            CSS is akward to learn (so its done until it works - nothing more)
-                            <sup class="c-orange">*</sup>
+                            CSS is akward to learn<sup class="c-orange">*</sup>
                         </li>
-                        <li class="fragment">So: Nobody cares to really learn it!</li>
-                        <li class="fragment">Thus: Helpful Features are not used</li>
-                        <li class="fragment">Finally: Know-How is in very few heads</li>
+                        <li class="fragment">
+                            Everybody fiddles until it works!<sup class="c-orange">*</sup>
+                        </li>
                     </ul>
                     <br/>
+                    <p class="fragment">Thus: Helpful Features are not used</p>
+                    <p class="fragment">Finally: Know-How is in very few heads</p>
                     <br/>
                     <br/>
                     <p class="bg-grey-light" style="text-align:left;font-size:0.75em;padding:.25em"><sup class="c-orange">*</sup>exaggeration intended</p>
                 </section>
 
                 <section>
-                    <h2>Why should we care</h2>
-                    <p>CSS is a bunch of incoherent gabeldigook that makes stuff look good!</p>
+                    <h2 class="c-purple">Topics</h2>
 
                     <ul>
-                        <li class="fragment">CSS actually has different layout modes</li>
-                        <li class="fragment">If we understand some more recent features ...
-                            <span class="fragment c-orange">It will make our life easier (and maybe we can have even fun writing it)</span>
-                            </li>
+                        <li class="fragment c-blue">Why do I recommend a CSS reset?</li>
+                        <li class="fragment c-blue">What is the cascade?</li>
+                        <li class="fragment c-blue">What does <code>@layer</code> do?</li>
+                        <li class="fragment c-blue">What is the parent selector?</li>
+                        <li class="fragment c-blue">How can <code>@container</code> queries help?</li>
+                        <li class="fragment c-blue"><code>grid</code> vs <code>flex</code>?</li>
+                        <li class="fragment c-blue">Can we even stop using SASS?</li>
                     </ul>
                 </section>
-
-                <section data-markdown="slides/02_cascade.md"></section>
-
             </section>
 
-            <section class="trennblatt trennblatt-blue use-img use-img-SD">
-                <h2>What the ... is a CSS reset?
-                    <p style="text-transform: none; font-size:0.75em" class="fragment">
-                        Why should we need it anyways?
-                    </p>
+            <section id="css-reset" class="trennblatt trennblatt-blue use-img use-img-SD">
+                <h2>Why do I recommend a CSS Reset?</h2>
+            </section>
+            <section>
+                <section data-markdown="slides/01_basics.md"></section>
+            </section>
+
+
+            <section id="css-cascade" class="trennblatt trennblatt-blue use-img use-img-BT">
+                <h2>
+                    What is the
+                    <span class="c-green">Cascade</span>?
                 </h2>
             </section>
             <section>
-
-                <section data-markdown="slides/00_basics.md"></section>
-                <section class="bg-blue c-white">
-                    <h3>Repetition: The box model</h3>
-                    <ul>
-                        <li class="fragment">the `width` is usually calculated by the content box</li>
-                        <li class="fragment"></li>
-                        <li class="fragment"></li>
-                    </ul>
-                </section>
-                <!-- <section data-markdown="./boxmodel_folien.md"></section> -->
+                <section data-markdown="slides/02_cascade.md"></section>
             </section>
+
+            <section id="at-layer" class="trennblatt trennblatt-green use-img use-img-DS">
+                <h2>What does &nbsp; <code class="c-purple">@layer</code> &nbsp; do?</h2>
+            </section>
+            <section>
+                <section data-markdown="slides/03_layer.md"></section>
+            </section>
+
+            <section id="css-has" class="trennblatt trennblatt-purple use-img use-img-JB">
+                <h2>What is the parent selector?</h2>
+            </section>
+            <section>
+                <section data-markdown="slides/04_has.md"></section>
+            </section>
+
+            <section id="css-container" class="trennblatt trennblatt-orange use-img use-img-SOK">
+                <h2>How can <code>@container</code> queries help?</h2>
+            </section>
+            <section>
+                <section data-markdown="slides/05_container.md"></section>
+            </section>
+
+            <section id="grid-vs-flex" class="trennblatt trennblatt-blue-light use-img use-img-KL">
+                <h2><code>grid</code> vs <code>flex</code></h2>
+            </section>
+            <section>
+                <section data-markdown="slides/06_grid_flex.md"></section>
+            </section>
+
+            <section id="nesting" class="trennblatt trennblatt-blue-light use-img use-img-YW">
+                <h2>Can we even stop using SASS?</h2>
+            </section>
+            <section>
+                <section data-markdown="slides/07_nesting.md"></section>
+            </section>
+
         </div>
     </div>
     <script type="module" src="./dist/reveal.esm.js"></script>

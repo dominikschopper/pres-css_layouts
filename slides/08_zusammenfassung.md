@@ -1,18 +1,18 @@
-## Zusammenfassung & Nächste Schritte
+## Summary & Next Steps
 
-**Was wir gelernt haben:**
-- **@layer:** Saubere CSS-Architektur ohne Spezifitätskriege
-- **:has():** Parent-Selektoren endlich möglich
-- **Container Queries:** Echte Komponenten-Responsiveness
-- **Grid vs Flex:** Klare Entscheidungsregeln
-- **CSS Nesting:** Weniger Build-Tools nötig
+**What we learned:**
+- **@layer:** Clean CSS architecture without specificity wars
+- **:has():** Parent selectors finally possible
+- **Container Queries:** True component responsiveness
+- **Grid vs Flex:** Clear decision rules
+- **CSS Nesting:** Fewer build tools needed
 
-**Konkrete Empfehlungen für unser Team:**
-1. CSS Reset einführen
-2. @layer für neue Projekte evaluieren
-3. :has() für Form-Validierung testen
-4. Container Queries für Komponenten-Bibliothek
-5. Grid für Layouts, Flex für Komponenten
-6. CSS Nesting für neue Komponenten ausprobieren
+**Concrete recommendations for our team:**
+1. Introduce CSS Reset
+2. Evaluate @layer for new projects
+3. Test :has() for form validation
+4. Container Queries for component library
+5. Grid for layouts, Flex for components
+6. Try CSS Nesting for new components
 
-**Fragen & Diskussion**
+**Questions & Discussion**

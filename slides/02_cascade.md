@@ -10,6 +10,26 @@
 
 ---
 
+## Later rules win!
+
+
+```html
+<p class="warning">lorem ipsum</p>
+```
+
+author styles
+```css
+.warning { color: red; }
+```
+
+`!important` author styles
+```css
+p { color: black !important; }
+```
+Text will be black!
+
+---
+
 ## Within each Cascade layer
 
 **When multiple rules have the same cascade priority:**

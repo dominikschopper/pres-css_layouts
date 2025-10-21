@@ -1,21 +1,21 @@
-## Container Queries - Das Problem
+## Container Queries - The Problem
 
-**Warum so lange schwierig?**
-- Media Queries: Viewport-basiert
-- Problem: Komponenten kennen ihren Container nicht
-- 20+ Jahre CSS ohne echte Komponenten-Responsiveness
+**Why so difficult for so long?**
+- Media Queries: Viewport-based
+- Problem: Components don't know their container
+- 20+ years of CSS without true component responsiveness
 
-**Media Queries helfen nicht:**
+**Media Queries don't help:**
 ```css
 @media (min-width: 600px) {
   .card { font-size: 18px; }
-  /* Aber Sidebar-Cards auch! */
+  /* But sidebar cards too! */
 }
 ```
 
 ---
 
-## Container Queries - Die Lösung
+## Container Queries - The Solution
 
 **Setup:**
 ```css
@@ -24,7 +24,7 @@
 }
 ```
 
-**Responsive Komponente:**
+**Responsive component:**
 ```css
 @container (min-width: 300px) {
   .card { display: grid; }
@@ -33,16 +33,16 @@
 
 ---
 
-## Container Queries - Praktische Beispiele
+## Container Queries - Practical Examples
 
-**Kleine Container: Stack Layout**
+**Small container: Stack layout**
 ```css
 @container (max-width: 400px) {
   .article { display: block; }
 }
 ```
 
-**Große Container: Grid Layout**
+**Large container: Grid layout**
 ```css
 @container (min-width: 500px) {
   .article {
@@ -54,17 +54,17 @@
 
 ---
 
-## Container Queries - UX/Design Möglichkeiten
+## Container Queries - UX/Design Possibilities
 
-**Neue Design-Patterns:**
-- **Intrinsic Web Design:** Komponenten passen sich ihrem Raum an
-- **Contextual Responsiveness:** Sidebar vs Main Content unterschiedlich
-- **Progressive Enhancement:** Mehr Platz = mehr Features
+**New design patterns:**
+- **Intrinsic Web Design:** Components adapt to their space
+- **Contextual Responsiveness:** Sidebar vs Main Content differently
+- **Progressive Enhancement:** More space = more features
 
-**Entwickler-Vorteile:**
-- Echte Komponentenisolation
-- Keine globalen Media Query Konflikte
-- Testbare, vorhersagbare Layouts
+**Developer advantages:**
+- True component isolation
+- No global media query conflicts
+- Testable, predictable layouts
 
 ---
 
@@ -73,12 +73,12 @@
 **Container Query Units:**
 ```css
 .card {
-  font-size: 4cqw;  /* 4% der Container-Breite */
-  padding: 2cqh;    /* 2% der Container-Höhe */
+  font-size: 4cqw;  /* 4% of container width */
+  padding: 2cqh;    /* 2% of container height */
 }
 ```
 
-**Multi-Dimensional Queries:**
+**Multi-dimensional queries:**
 ```css
 @container (min-width: 400px) and (min-height: 300px) {
   .card { aspect-ratio: 16/9; }
@@ -89,8 +89,8 @@
 
 ## Container Queries Browser Support
 
-**Aktuelle Unterstützung:**
+**Current support:**
 - ✅ Chrome 106+ (September 2022)
-- ✅ Firefox 110+ (Februar 2023)
+- ✅ Firefox 110+ (February 2023)
 - ✅ Safari 16+ (September 2022)
 - 📊 **Can I Use: 84% global support**

@@ -1,39 +1,39 @@
-## Grid vs Flex - Wann was verwenden?
+## Grid vs Flex - When to use what?
 
-**Die Grundregel:**
-- **Flexbox:** 1-dimensionale Layouts (Reihe ODER Spalte)
-- **CSS Grid:** 2-dimensionale Layouts (Reihen UND Spalten)
+**The basic rule:**
+- **Flexbox:** 1-dimensional layouts (row OR column)
+- **CSS Grid:** 2-dimensional layouts (rows AND columns)
 
-**Flexbox - perfekt für:**
-Navigation, Button-Gruppen, Card-Reihen, Centering
+**Flexbox - perfect for:**
+Navigation, button groups, card rows, centering
 
-**Grid - perfekt für:**
-Page-Layouts, Card-Grids, Komplexe Layouts, Überlappende Elemente
+**Grid - perfect for:**
+Page layouts, card grids, complex layouts, overlapping elements
 
 ---
 
-## Grid vs Flex - Entscheidungshilfe
+## Grid vs Flex - Decision Guide
 
-**Frage 1:** Brauche ich Kontrolle über Zeilen UND Spalten?
-- **Ja → Grid** | **Nein → Flex**
+**Question 1:** Do I need control over rows AND columns?
+- **Yes → Grid** | **No → Flex**
 
-**Frage 2:** Soll Content das Layout bestimmen?
-- **Ja → Flex** (Content-first) | **Nein → Grid** (Layout-first)
+**Question 2:** Should content determine the layout?
+- **Yes → Flex** (Content-first) | **No → Grid** (Layout-first)
 
-**Frage 3:** Wie viele Dimensionen?
+**Question 3:** How many dimensions?
 - **1D → Flex** | **2D → Grid**
 
 ---
 
 ## Grid Browser Support
 
-**CSS Grid Unterstützung:**
-- ✅ Chrome 57+ (März 2017)
-- ✅ Firefox 52+ (März 2017)
-- ✅ Safari 10.1+ (März 2017)
+**CSS Grid support:**
+- ✅ Chrome 57+ (March 2017)
+- ✅ Firefox 52+ (March 2017)
+- ✅ Safari 10.1+ (March 2017)
 - 📊 **Can I Use: 96% global support**
 
-**Flexbox Unterstützung:**
+**Flexbox support:**
 - 📊 **Can I Use: 98% global support**
 
-**Fazit:** Beide können bedenkenlos verwendet werden!
+**Conclusion:** Both can be used without hesitation!

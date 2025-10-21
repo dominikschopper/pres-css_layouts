@@ -325,7 +325,7 @@ body .reveal .slides .c-palepink-light {
     background-image: url("../../assets/profiles/HD.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-JB):before {
-    background-image: url("../../assets/profiles/MH.jpg");
+    background-image: url("../../assets/profiles/JB.jpg");
 }
 .reveal:has(.present.trennblatt.use-img-JK):before {
     background-image: url("../../assets/profiles/JK.jpg");
@@ -404,7 +404,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading-color: #131313;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: none;
   --r-heading-text-shadow: none;
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;

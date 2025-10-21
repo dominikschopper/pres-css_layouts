@@ -1,9 +1,9 @@
-## CSS Nesting - Endlich nativ verfügbar!
+## CSS Nesting - Finally available natively!
 
-**Das lange Warten hat ein Ende:**
-- 20+ Jahre: Nur mit Preprocessors (SCSS, Less, Stylus)
-- 2023: CSS Nesting nativ in Browsern
-- Weniger Build-Tools nötig
+**The long wait is over:**
+- 20+ years: Only with preprocessors (SCSS, Less, Stylus)
+- 2023: CSS Nesting native in browsers
+- Fewer build tools needed
 
 **Native CSS Nesting:**
 ```css
@@ -16,16 +16,16 @@
 
 ---
 
-## CSS vs SCSS - Empfehlung heute
+## CSS vs SCSS - Recommendation today
 
-**Verwende natives CSS Nesting für:**
-- ✅ Einfache Verschachtelung & Pseudo-Selektoren
-- ✅ Moderne Projekte ohne Build-Step
-- ✅ Prototyping & kleine Projekte
+**Use native CSS Nesting for:**
+- ✅ Simple nesting & pseudo-selectors
+- ✅ Modern projects without build step
+- ✅ Prototyping & small projects
 
-**Verwende SCSS weiterhin für:**
+**Continue using SCSS for:**
 - 🔧 Mixins & Functions
 - 🔧 Loops & Control Structures
-- 🔧 Große Projekte mit komplexer Architektur
+- 🔧 Large projects with complex architecture
 
 **Browser Support:** 79% global (Chrome 112+, Firefox 117+, Safari 16.5+)
