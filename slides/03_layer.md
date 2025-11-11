@@ -12,7 +12,6 @@
 
 ---
 
-
 ### CSS @layer - Moderne Architektur
 
 #### Layer-Definition
@@ -25,14 +24,14 @@
   * { margin: 0; padding: 0; }
 }
 
-@layer base {
-  body { font-family: system-ui; }
-  h1 { font-size: 2rem; }
-}
-
 @layer lib {
   .btn { padding: 0.5rem 1rem; border: none; }
   .card { padding: 1rem; border-radius: 8px; }
+}
+
+@layer base {
+  body { font-family: system-ui; }
+  h1 { font-size: 2rem; }
 }
 
 @layer utilities {

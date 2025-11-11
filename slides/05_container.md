@@ -94,3 +94,5 @@
 - ✅ Firefox 110+ (February 2023)
 - ✅ Safari 16+ (September 2022)
 - 📊 **Can I Use: 84% global support**
+
+<a href="./xmp/container-queries/index.html" target=_blank>Container Queries simple example</a>

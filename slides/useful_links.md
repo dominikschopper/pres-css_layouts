@@ -110,3 +110,10 @@ in short: all major browsers support it nowadays!
 - [CSS :has()](https://caniuse.com/css-has) &rarr; 87% support
 - [CSS @layer](https://caniuse.com/css-cascade-layers) &rarr; 89% support
 - [CSS Nesting](https://caniuse.com/css-nesting) &rarr; 79% support
+
+---
+
+### awesome stuff i encountered
+
+- [Grid taken Next Level](https://frontend.horse/articles/thinking-outside-the-box-with-css-grid/)
+- [Spinner taken Next Level](https://frontend.horse/articles/concentric-circle-spinner/)

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Queries - Interactive Resize Demo</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/theme/cofinpro.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .demo-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .instructions {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .size-display {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .size-display span {
+            color: #667eea;
+            font-size: 1.8rem;
+        }
+
+        #resizable-container {
+            resize: horizontal;
+            outline: 5px solid darkblue;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 8px 32px rgba(5px, 5px, 10px, 0.3);
+            overflow: hidden;
+            position: relative;
+            width: 614px;
+        }
+
+        .resize-handle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: .7rem;
+            background: #667eea;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: ew-resize;
+            border-top-left-radius: 12px;
+        }
+
+        .container {
+            container-type: inline-size;
+            container-name: card-container;
+            height: fit-content;
+            width: 100%;
+            height: fit-content;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .card-title {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-meta {
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 0.5rem;
+        }
+
+        .breakpoint-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .breakpoint-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .breakpoint-info ul {
+            list-style: none;
+        }
+
+        .breakpoint-info li {
+            padding: 0.5rem 0;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .show-style {
+            display: block;
+            white-space: pre;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            padding: .5rem .25rem;
+            background-color: #323232;
+            color: #fafafa;
+            width: 50%;
+        }
+
+        .style-row {
+            display: flex;
+            gap: 1rem;
+            &>* {
+                width: 32%;
+            }
+        }
+
+
+
+        /* Default: Stack layout (narrow container) */
+        @container card-container (max-width: 499px) {
+            .card {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Wide layout: Side by side */
+        @container card-container (min-width: 500px) {
+            .card {
+                display: grid;
+                grid-template-columns: 250px 1fr;
+                gap: 1.5rem;
+                align-items: start;
+            }
+
+            .card-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 1.5rem 1.5rem 1.5rem 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../../reveal.js/plugin/highlight/idea.css">
+</head>
+
+<body class="bg-purple">
+    <div class="demo-wrapper">
+        <h1>Container Queries - Interactive Demo</h1>
+        <p class="instructions">Drag the bottom-right corner to resize the container and see the card adapt!</p>
+
+        <div class="size-display">
+            Container Width: <span id="containerWidth">600</span>px
+        </div>
+
+        <div id="resizable-container">
+            <div class="container">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=5" alt="Demo Image" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Responsive Card Component</h2>
+                        <p class="card-text">
+                            This card adapts to its container size using Container Queries.
+                            When the container is narrow, the image appears above the text.
+                            When the container is wider, the image moves to the left side.
+                            Try resizing to see the magic happen!
+                        </p>
+                        <p class="card-meta">
+                            <strong>Breakpoint:</strong> 500px
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="resize-handle bg-blue c-orange">&lrarr;</div>
+        </div>
+
+        <div class="breakpoint-info">
+            <div class="style-row">
+                <pre><code class="css">
+                    .container {
+                        container-type: inline-size;
+                        container-name: card-container;
+                        height: fit-content;
+                        width: 100%;
+                        height: fit-content;
+                    }
+                    /* Card Styles */
+                    .card {
+                        background: white;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        height: 100%;
+                    }
+
+                    .card-title {
+                        color: #333;
+                        margin-bottom: 1rem;
+                        font-size: 1.5rem;
+                    }
+                </code></pre>
+                <pre><code class="css">
+                    /* Default: Stack layout (narrow container) */
+                    @container card-container (max-width: 499px) {
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .card-image {
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                        }
+
+                        .card-content {
+                            padding: 1.5rem;
+                        }
+                    }
+                </code></pre>
+                <pre><code class="css">
+                    /* Wide layout: Side by side */
+                    @container card-container (min-width: 500px) {
+                        .card {
+                            display: grid;
+                            grid-template-columns: 250px 1fr;
+                            gap: 1.5rem;
+                            align-items: start;
+                        }
+
+                        .card-image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        .card-content {
+                            padding: 1.5rem 1.5rem 1.5rem 0;
+                        }
+                    }
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const widthDisplay = document.getElementById('containerWidth');
+
+        function updateSizeDisplay() {
+            const width = Math.round(container.offsetWidth);
+            widthDisplay.textContent = width;
+            heightDisplay.textContent = height;
+        }
+
+        const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                updateSizeDisplay();
+            }
+        });
+
+        resizeObserver.observe(container);
+        updateSizeDisplay();
+    </script>
+    <script type="module">
+        import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+        hljs.addPlugin({
+            'before:highlightElement': ({ el/** HTMLElement */, language }) => {
+                const lines = el.innerText.split(/\r?\n/);
+                const cutOff = RegExp('^(\\s*)').exec(lines[1])[0];
+                const cutOffRegexp = new RegExp(`^${cutOff}`);
+                const trimmed = lines.map(strg => strg.replace(cutOffRegexp, ''));
+                const joined = trimmed.join("\n");
+                el.innerHTML = joined;
+            }
+        })
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
