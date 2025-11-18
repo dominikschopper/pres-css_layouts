@@ -6,10 +6,25 @@
 - the `input` has some weird `font` presets
 - e.g. margins, font-sizes, font-family might differ
 - So we have inconsistent behaviour for different browser
+- <!-- .element class="c-purple"  --> the default sizing is <code>box-sizing: content-box</code>
 
 ---
 
-#### Modern CSS Reset
+#### `border-bx` vs `content-box`
+
+```css
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    width: 220px;
+}
+```
+
+![box-sizing comparison](./slides/contentbox-borderbox.jpg)
+
+---
+
+#### Modern CSS Reset (partial)
 
 ```css[2-4|5-7|9-11|13-16|]
 /* Moderner Reset */
@@ -34,14 +49,7 @@ img, picture, video, canvas, svg {
 [Josh Comeaus Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
 
 ---
-#### `border-bx` vs `content-box`
 
-```css
-.box {
-    border: 1px solid black;
-    padding: 20px;
-    width: 220px;
-}
-```
+### Example
 
-![box-sizing comparison](./slides/contentbox-borderbox.jpg)
+<a href="../xmp/00_box-model/index.html" target=_blank>some local code to fiddle</a>
