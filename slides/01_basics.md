@@ -1,12 +1,12 @@
 ### CSS Reset / Normalize
 
 #### Problem
-- Each and every browser has its own default styles
+- <!-- .element class="c-purple"  --> the default sizing is <code>box-sizing: content-box</code>
 - an `img` is not `display:block`?
 - the `input` has some weird `font` presets
 - e.g. margins, font-sizes, font-family might differ
-- So we have inconsistent behaviour for different browser
-- <!-- .element class="c-purple"  --> the default sizing is <code>box-sizing: content-box</code>
+- thus inconsistent behaviour for different browser
+- each and every browser has its own default styles
 
 ---
 

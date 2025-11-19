@@ -31,7 +31,6 @@ Text will be black!
 ---
 
 ## Within each Cascade layer
-
 **When multiple rules have the same cascade priority:**
 
 1. **Specificity** determines the winner:
