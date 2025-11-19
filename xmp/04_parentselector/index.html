@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Selector Example</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../_cofinpro-variables.css" />
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: var(--c-grey-black);
+            display: grid;
+            gap: 1rem;
+            margin: 1rem;
+
+            &>* {
+                width: 66%;
+                max-width: 960px;
+                background-color: var(--c-blue-light);
+                margin: 0 auto;
+                padding: 1rem 2rem;
+            }
+        }
+        header {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        style {
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre;
+            font-size: 14px;
+            border: 2px solid #363636;
+            background: #36363690;
+            color: #FEFEFE;
+            width: fit-content;
+            padding: .2em .5em;
+            &:before {
+                content: '\003cstyle\003e';
+            }
+            &:after {
+                content: '\000a\003c/style\003e';
+            }
+        }
+    </style>
+
+    <style>
+        form {
+            display: grid;
+            gap: 1rem;
+            fieldset, p {
+                display: block;
+                border: none;
+                border-bottom: 3px solid var(--c-purple);
+                padding: .5rem;
+                flex-direction: column;
+                width: 66%;
+                gap: .5rem;
+                margin: auto;
+
+                legend {
+                    margin: 1rem 0 0 0;
+                    display: contents;
+                    font-weight: 600;
+                }
+            }
+
+            .form-row {
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+                padding: .25rem 0;
+            }
+
+            label {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            input, select {
+                height: 2.2em;
+                line-height: 1.6em;
+            }
+        }
+
+    </style>
+ </head>
+<body>
+    <header>
+        <p>an example with a nice little parent selector</p>
+    </header>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            rerum consequatur eos impedit repudiandae labore placeat, quia
+            numquam ab explicabo, illo perspiciatis?
+        </p>
+
+        <form action="#form" id="form" method="POST">
+            <p>Please fill out this form</p>
+            <fieldset>
+                <legend>Personal Data</legend>
+                <div class="error">There are errors in this form block</div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Firstname</span>
+                        <input type="text" />
+                    </label>
+
+                    <label>
+                        <span>Lastname*</span>
+                        <input type="text" required />
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Email*</span>
+                        <input type="email" required />
+                    </label>
+
+                    <label>
+                        <span>Phone</span>
+                        <input type="tel" />
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Address</legend>
+                <div class="error">There are errors in this form block</div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Country*</span>
+                        <select required>
+                            <option value="">...pls select</option>
+                            <option value="AT">Austria</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IT">Italy</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="ES">Spain</option>
+                            <option value="SE">Sweden</option>
+                        </select>
+                    </label>
+
+                    <div></div>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>City</span>
+                        <input type="text" />
+                    </label>
+
+                    <label>
+                        <span>zip code</span>
+                        <input type="text" />
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Street</span>
+                        <input type="text" />
+                    </label>
+
+                    <label>
+                        <span>No</span>
+                        <input type="text" />
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <button>Absenden</button>
+            </fieldset>
+        </form>
+
+        <br /><br />
+        <style>
+    .error {
+        color: var(--c-orange);
+        background-color: var(--c-grey-black);
+        padding: 4px;
+        display: none;
+        justify-self: flex-end;
+    }
+    fieldset:has(input:user-invalid, select:user-invalid) {
+        outline: 3px solid var(--c-orange);
+    }
+    fieldset:has(input:user-invalid, select:user-invalid) .error {
+        display: unset;
+    }
+        </style>
+    </main>
+</body>
+</html>

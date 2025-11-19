@@ -16,12 +16,12 @@
 
 #### Layer-Definition
 
-```css [1-2|4-6|8-11|13-16|18-21|]
-/* order of layers -> important */
+```css [1-2|4-6|8-11|13-16|18-21| ]
+/* order of layers less -> more important */
 @layer reset, base, lib, utilities;
 
 @layer reset {
-  * { margin: 0; padding: 0; }
+  * { margin: 0; padding: 0; } /* e.g. the reset we've seen */
 }
 
 @layer lib {

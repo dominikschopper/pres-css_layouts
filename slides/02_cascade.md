@@ -46,7 +46,6 @@ p { color: blue; }           /* 0001 */
 
 ---
 
-
 ### Example
 
 <a href="../xmp/02_cascade/index.html" target=_blank>some local code to fiddle with the cascade</a>
