@@ -44,3 +44,10 @@ Text will be black!
 p { color: blue; }           /* 0001 */
 #header .logo { color: red; } /* 0110 - wins */
 ```
+
+---
+
+
+### Example
+
+<a href="../xmp/02_cascade/index.html" target=_blank>some local code to fiddle with the cascade</a>

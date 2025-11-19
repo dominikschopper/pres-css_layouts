@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascade Example</title>
+  <link rel="stylesheet" href="../../reset.css" />
+  <style>
+    style {
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre;
+      font-size: 14px;
+      border: 2px solid #363636;
+      background: #36363690;
+      color: #FEFEFE;
+      width: fit-content;
+      padding: .2em .5em;
+      &:before {
+        content: '\003cstyle\003e';
+      }
+      &:after {
+        content: '\000a\003c/style\003e';
+      }
+    }
+
+    main {
+      display: block;
+      width: 70%;
+      margin: 2% auto;
+    }
+    .row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="row">
+      <style>
+    h1 {
+      color: blue !important;
+    }
+      </style>
+      <style>
+    h1 {
+      color: black;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    h1.warning {
+      color: darkred;
+    }
+        </style>
+    </div>
+
+    <h1>Some H1 Header</h1>
+    <h1 class="warning">Some warning H1 Header</h1>
+
+  </main>
+</body>
+</html>
