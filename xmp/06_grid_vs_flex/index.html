@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid vs Flexbox - Layout Demo</title>
+    <style>
+        :root {
+            /* primary */
+            --c-orange: #FD6202;
+            --c-black: #131313;
+            --c-white: #FFFFFF;
+
+            /* secondary */
+            --c-blue: #5072FB;
+            --c-purple: #8566ED;
+            --c-green: #60D391;
+
+            /* tertiary */
+            --c-pink: #FD6893;
+            --c-palepink: #F8C5E3;
+
+            /* greys */
+            --c-grey-black: #131313;
+            --c-grey: #898584;
+            --c-grey-light: #C2BCBC;
+
+            /* derivates */
+            --c-blue-light: #AEBAFA;
+            --c-purple-light: #CFCAFC;
+            --c-green-light: #ABF1C7;
+            --c-pink-light: #FFB8CA;
+            --c-palepink-light: #FDE1F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--c-black);
+            background: var(--c-white);
+        }
+
+        .demo-info {
+            background: var(--c-white);
+            color: var(--c-orange);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .demo-info h1 {
+            margin-bottom: 1rem;
+        }
+
+        .toggle-container {
+            margin-top: 1rem;
+        }
+
+        .toggle-btn {
+            background: var(--c-white);
+            color: var(--c-orange);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: var(--c-purple);
+            transform: translateY(-2px);
+        }
+
+        /* DEMO 1: CSS Grid for Page Layout */
+        .page-layout {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 80vh;
+            transition: all 0.3s ease;
+        }
+
+        .page-layout.highlight {
+            outline: 4px solid var(--c-purple);
+            outline-offset: 4px;
+        }
+
+        /* DEMO 2: Flexbox for Header (1D horizontal) */
+        .header {
+            grid-area: header;
+            background: var(--c-blue);
+            color: var(--c-white);
+            padding: 1.5rem 2rem;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .header.highlight {
+            background: var(--c-blue-light);
+            outline: 4px solid var(--c-blue);
+            outline-offset: -4px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Navigation also uses Flexbox */
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--c-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--c-purple);
+        }
+
+        .cta-button {
+            background: var(--c-orange);
+            color: var(--c-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--c-purple-light);
+            color: var(--c-grey-black);
+            transform: scale(1.05);
+        }
+
+        /* DEMO 3: Flexbox for Sidebar (1D vertical) */
+        .sidebar {
+            grid-area: sidebar;
+            background: var(--c-white);
+            padding: 2rem 1rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 5px 5px 10px var(--c-purple-light);
+        }
+
+        .sidebar.highlight {
+            background: var(--c-purple-light);
+            outline: 4px solid var(--c-purple);
+            outline-offset: -4px;
+        }
+
+        .sidebar-link {
+            color: var(--c-blue);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(4px);
+        }
+
+        /* Main Content - Normal Flow */
+        .main {
+            grid-area: main;
+            padding: 2rem;
+            background: var(--c-white);
+        }
+
+        .main h2 {
+            color: var(--c-orange);
+            margin-bottom: 1rem;
+        }
+
+        .main p {
+            margin-bottom: 1rem;
+            color: var(--c-grey);
+        }
+
+        .main strong {
+            color: var(--c-blue);
+        }
+
+        /* Footer - Normal Flow */
+        .footer {
+            grid-area: footer;
+            background: var(--c-grey-black);
+            color: var(--c-white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Legend */
+        .legend {
+            background: var(--c-palepink-light);
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--c-orange);
+        }
+
+        .legend h3 {
+            color: var(--c-orange);
+            margin-bottom: 1rem;
+        }
+
+        .legend ul {
+            list-style: none;
+        }
+
+        .legend li {
+            margin: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--c-grey-black);
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .grid-color {
+            background: var(--c-purple);
+        }
+
+        .flex-color {
+            background: var(--c-blue);
+        }
+
+        .normal-color {
+            background: var(--c-grey-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-layout {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-info">
+        <h1>Grid vs Flexbox - Layout Demo</h1>
+        <div class="toggle-container">
+            <button id="toggleHighlight" class="toggle-btn">Toggle Layout Highlights</button>
+        </div>
+    </div>
+
+    <div class="page-layout" id="pageLayout">
+        <header class="header" id="header">
+            <div class="logo">MyApp</div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <button class="cta-button">Get Started</button>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="sidebar-link">Dashboard</a>
+            <a href="#" class="sidebar-link">Projects</a>
+            <a href="#" class="sidebar-link">Team</a>
+            <a href="#" class="sidebar-link">Settings</a>
+            <a href="#" class="sidebar-link">Help</a>
+        </aside>
+
+        <main class="main">
+            <h2>Main Content Area</h2>
+            <p>This main content area uses <strong>normal flow</strong> - no special layout needed!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>The beauty of CSS is knowing when NOT to use Grid or Flexbox. Sometimes normal flow is perfect.</p>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 MyApp - Footer uses normal flow too!</p>
+        </footer>
+    </div>
+
+    <div class="legend">
+        <h3>Layout Breakdown:</h3>
+        <ul>
+            <li><span class="legend-box grid-color"></span> <strong>Demo 1:</strong> CSS Grid for page layout (2D positioning)</li>
+            <li><span class="legend-box flex-color"></span> <strong>Demo 2:</strong> Flexbox for header (1D horizontal)</li>
+            <li><span class="legend-box flex-color"></span> <strong>Demo 3:</strong> Flexbox for sidebar (1D vertical)</li>
+            <li><span class="legend-box normal-color"></span> Normal flow for main & footer</li>
+        </ul>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleHighlight');
+        const pageLayout = document.getElementById('pageLayout');
+        const header = document.getElementById('header');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            pageLayout.classList.toggle('highlight');
+            header.classList.toggle('highlight');
+            sidebar.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>
