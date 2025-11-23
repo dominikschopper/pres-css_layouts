@@ -67,7 +67,7 @@ use the `layer(name)` function
 ## @layer Browser Support
 
 **Current support:**
-- ✅ Chrome 99+ (March 2022)
-- ✅ Firefox 97+ (February 2023)
-- ✅ Safari 15.4+ (March 2022)
-- ✅ Edge 99+ (March 2022)
+- Chrome 99+ (March 2022)
+- Firefox 97+ (February 2023)
+- Safari 15.4+ (March 2022)
+- Edge 99+ (March 2022)

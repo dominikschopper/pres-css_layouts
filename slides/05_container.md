@@ -90,9 +90,9 @@
 ## Container Queries Browser Support
 
 **Current support:**
-- ✅ Chrome 106+ (September 2022)
-- ✅ Firefox 110+ (February 2023)
-- ✅ Safari 16+ (September 2022)
-- 📊 **Can I Use: 84% global support**
+- Chrome 106+ (September 2022)
+- Firefox 110+ (February 2023)
+- Safari 16+ (September 2022)
+- **Can I Use: 84% global support**
 
 <a href="./xmp/05_container-queries/index.html" target=_blank>Container Queries code to fiddle with</a>

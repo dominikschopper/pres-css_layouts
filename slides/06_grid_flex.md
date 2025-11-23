@@ -28,10 +28,10 @@ Page layouts, card grids, complex layouts, overlapping elements
 ## Grid Browser Support
 
 **CSS Grid support:**
-- ✅ Chrome 57+ (March 2017)
-- ✅ Firefox 52+ (March 2017)
-- ✅ Safari 10.1+ (March 2017)
-- 📊 **Can I Use: 96% global support**
+- Chrome 57+ (March 2017)
+- Firefox 52+ (March 2017)
+- Safari 10.1+ (March 2017)
+- **Can I Use: 96% global support**
 
 **Flexbox support:**
 - 📊 **Can I Use: 98% global support**

@@ -20,7 +20,7 @@
 }
 ```
 
-![box-sizing comparison](./slides/contentbox-borderbox.jpg)
+![box-sizing comparison](./slides/slide-assets/contentbox-borderbox.jpg)
 
 ---
 

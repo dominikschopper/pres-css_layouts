@@ -39,7 +39,7 @@
 ## :has() Browser Support
 
 **Current support:**
-- ✅ Chrome 105+ (September 2022)
-- ✅ Firefox 121+ (December 2023)
-- ✅ Safari 15.4+ (March 2022)
+- Chrome 105+ (September 2022)
+- Firefox 121+ (December 2023)
+- Safari 15.4+ (March 2022)
 - 📊 **Can I Use: 87% global support**
