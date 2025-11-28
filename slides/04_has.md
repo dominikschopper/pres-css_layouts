@@ -32,7 +32,7 @@
 
 ### Example
 
-<a href="../xmp/04_parentselector/index.html" target=_blank>some fiddling with the parent selector</a>
+<a href="./xmp/04_parentselector/index.html" target=_blank>some fiddling with the parent selector</a>
 
 ---
 
