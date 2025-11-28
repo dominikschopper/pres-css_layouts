@@ -17,11 +17,18 @@ Page layouts, card grids, complex layouts, overlapping elements
 **Question 1:** Do I need control over rows AND columns?
 - **Yes → Grid** | **No → Flex**
 
+<div class="fragment">
+
 **Question 2:** Should content determine the layout?
 - **Yes → Flex** (Content-first) | **No → Grid** (Layout-first)
 
+</div>
+<div class="fragment">
+
 **Question 3:** How many dimensions?
 - **1D → Flex** | **2D → Grid**
+
+</div>
 
 ---
 
