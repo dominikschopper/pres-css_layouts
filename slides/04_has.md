@@ -28,11 +28,6 @@
   justify-content: center;
 }
 ```
----
-
-### Example
-
-<a href="./xmp/04_parentselector/index.html" target=_blank>some fiddling with the parent selector</a>
 
 ---
 
@@ -43,3 +38,9 @@
 - Firefox 121+ (December 2023)
 - Safari 15.4+ (March 2022)
 - 📊 **Can I Use: 87% global support**
+
+---
+
+### Example
+
+<a href="./xmp/04_parentselector/index.html" target=_blank>some fiddling with the parent selector</a>
