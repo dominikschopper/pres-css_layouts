@@ -37,3 +37,7 @@ Page layouts, card grids, complex layouts, overlapping elements
 - 📊 **Can I Use: 98% global support**
 
 **Conclusion:** Both can be used without hesitation!
+
+---
+
+[grid or flex example](./xmp/06_grid_vs_flex/index.html)
