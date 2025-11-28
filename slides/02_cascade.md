@@ -48,6 +48,6 @@ p { color: blue; }           /* 0001 */
 
 ### Example
 
-<a href="./xmp/02_cascade/index.html" target=_blank>some local code to fiddle with thecascade</a>
+<a href="./xmp/02_cascade/index.html" target=_blank>some local code to fiddle with the cascade</a>
 we added a user stylesheet to firefox and added an `!important` rule, so it cannot be
 overriden by author styles
