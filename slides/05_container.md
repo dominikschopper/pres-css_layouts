@@ -26,8 +26,12 @@
 
 **Responsive component:**
 ```css
-@container (min-width: 300px) {
-  .card { display: grid; }
+@container (max-width: 400px) {
+  .card {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 ```
 
@@ -37,9 +41,8 @@
 
 **Small container: Stack layout**
 ```css
-@container (max-width: 400px) {
-  .article { display: block; }
-}
+/* default for smaller screens */
+.article { display: block; }
 ```
 
 **Large container: Grid layout**
@@ -79,6 +82,10 @@
 
 **Multi-dimensional queries:**
 ```css
+.wrapper {
+  container-type: size;
+}
+
 @container (min-width: 400px) and (min-height: 300px) {
   .card { aspect-ratio: 16/9; }
 }
