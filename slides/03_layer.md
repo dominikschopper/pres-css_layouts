@@ -16,17 +16,18 @@
 
 #### Layer-Definition
 
-```css [1-2|4-6|8-11|13-16|18-21| ]
+```css [1-2|4-6|8-12|14-17|19-22| ]
 /* order of layers less -> more important */
-@layer reset, base, lib, utilities;
+@layer reset, base, components, utilities;
 
 @layer reset {
   * { margin: 0; padding: 0; } /* e.g. the reset we've seen */
 }
 
-@layer lib {
+@layer components {
   .btn { padding: 0.5rem 1rem; border: none; }
   .card { padding: 1rem; border-radius: 8px; }
+  h1 { font-size: 1.5rem; }
 }
 
 @layer base {
@@ -50,9 +51,9 @@ your application
 use the `layer(name)` function
 
 ```css
-@layer reset, base, lib, utilities;
+@layer reset, base, components, utilities;
 
-@import 'https://somewhere/some.css' layer(lib);
+@import 'https://somewhere/some.css' layer(components);
 ```
 
 ---
@@ -60,7 +61,7 @@ use the `layer(name)` function
 **Benefits:**
 - Specificity becomes irrelevant
 - Clear architecture layers
-- overwriting is getting easier (no more specificity wars)
+- overwriting is getting easier
 
 ---
 

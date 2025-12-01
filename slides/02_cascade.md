@@ -10,44 +10,42 @@
 
 ---
 
-## Later rules win!
-
-
-```html
-<p class="warning">lorem ipsum</p>
-```
-
-author styles
-```css
-.warning { color: red; }
-```
-
-`!important` author styles
-```css
-p { color: black !important; }
-```
-Text will be black!
-
----
-
 ## Within each Cascade layer
 **When multiple rules have the same cascade priority:**
 
 1. **Specificity** determines the winner:
    - Inline styles (1000) > IDs (100) > Classes (10) > Elements (1)
-2. **Source order** as final tiebreaker:
-   - Later in the code wins
 
 **Examples:**
 ```css
-p { color: blue; }           /* 0001 */
-#header .logo { color: red; } /* 0110 - wins */
+p { color: blue; }       /* 0001 */
+.warning { color: red; } /* 0010 <- wins */
 ```
+
+```css
+.highlight          { color: blue; }   /* 0010 */
+.warning .highlight { color: red; }    /* 0020 */
+#header .highlight  { color: purple; } /* 0110 <- wins */
+```
+<!-- .element class="fragment" -->
+
+```css
+p { color: fuchsia !important; } /* <- new layer wins */
+```
+<!-- .element class="fragment" -->
 
 ---
 
 ### Example
 
 <a href="./xmp/02_cascade/index.html" target=_blank>some local code to fiddle with the cascade</a>
-we added a user stylesheet to firefox and added an `!important` rule, so it cannot be
+
+We added a user stylesheet to firefox and added an `!important` rule, so it cannot be
 overriden by author styles
+
+```css
+* {
+	color: limegreen !important;
+	background: rgb(111, 31, 111) !important;
+}
+```

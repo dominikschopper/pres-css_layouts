@@ -6,13 +6,30 @@
 - Fewer build tools needed
 
 **Native CSS Nesting:**
+
+<div style="display:flex; gap:1em;">
+
 ```css
 .card {
   padding: 1rem;
 
   &:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+  &--title { border-bottom: 1px solid var(--blue); }
 }
 ```
+
+```css
+.card {
+  padding: 1rem;
+}
+
+.card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+.card--title { border-bottom: 1px solid var(--blue); }
+```
+
+</div>
 
 ---
 

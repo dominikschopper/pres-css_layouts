@@ -59,7 +59,6 @@
 **New design patterns:**
 - **Intrinsic Web Design:** Components adapt to their space
 - **Contextual Responsiveness:** Sidebar vs Main Content differently
-- **Progressive Enhancement:** More space = more features
 
 **Developer advantages:**
 - True component isolation

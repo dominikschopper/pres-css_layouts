@@ -10,7 +10,7 @@
 
 ---
 
-#### `border-bx` vs `content-box`
+#### `content-box` vs `border-box`
 
 ```css
 .box {
@@ -24,9 +24,15 @@
 
 ---
 
+### Reset Example
+
+<a href="./xmp/00_box-model/index.html" target=_blank>some local code to fiddle</a>
+
+---
+
 #### Modern CSS Reset (partial)
 
-```css[2-4|5-7|9-11|13-16|]
+```css
 /* Moderner Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -46,10 +52,5 @@ img, picture, video, canvas, svg {
 }
 ```
 
-[Josh Comeaus Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+[Josh Comeaus full CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) (with explanations)
 
----
-
-### Example
-
-<a href="../xmp/00_box-model/index.html" target=_blank>some local code to fiddle</a>

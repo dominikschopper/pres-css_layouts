@@ -47,6 +47,6 @@ Page layouts, card grids, complex layouts, overlapping elements
 
 ---
 
-## Example
+## Example Grid and Flex
 
-[grid or flex example](./xmp/06_grid_vs_flex/index.html)
+[grid or flex example](./xmp/06_grid_vs_flex/index.html)<!-- .element target="_blank" -->
