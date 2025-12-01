@@ -11,10 +11,11 @@
 ---
 
 ## Within each Cascade layer
-**When multiple rules have the same cascade priority:**
+**When multiple rules are in the same cascade layer:**
 
-1. **Specificity** determines the winner:
-   - Inline styles (1000) > IDs (100) > Classes (10) > Elements (1)
+**Specificity** determines the winner:
+
+Inline styles (1000) > IDs (100) > Classes (10) > Elements (1)
 
 **Examples:**
 ```css

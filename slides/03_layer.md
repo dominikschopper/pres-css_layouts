@@ -16,28 +16,25 @@
 
 #### Layer-Definition
 
-```css [1-2|4-6|8-12|14-17|19-22| ]
+```css [1-2|4-7|9-11|13-15|17-19| ]
 /* order of layers less -> more important */
 @layer reset, base, components, utilities;
 
 @layer reset {
-  * { margin: 0; padding: 0; } /* e.g. the reset we've seen */
+  body { font-size: 16px; }
+  * { margin: 0; } /* e.g. the reset we've seen */
 }
 
 @layer components {
-  .btn { padding: 0.5rem 1rem; border: none; }
-  .card { padding: 1rem; border-radius: 8px; }
-  h1 { font-size: 1.5rem; }
+  h2 { margin: 1rem 0; font-size: 1.25rem; }
 }
 
 @layer base {
-  body { font-family: system-ui; }
-  h1 { font-size: 2rem; }
+  h2 { margin: 1.5rem 0; font-size: 1.5rem; }
 }
 
 @layer utilities {
-  .text-center { text-align: center; }
-  .hidden { display: none; }
+  h2 { margin: 1.25rem 0; }
 }
 ```
 
@@ -45,8 +42,7 @@
 
 ### import foreign css into layers
 
-you can also add external stylesheets into a specific layer in
-your application
+you can also add external stylesheets into a specific layer in your application
 
 use the `layer(name)` function
 
