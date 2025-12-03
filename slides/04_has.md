@@ -15,9 +15,9 @@
 ```
 
 ```html
-<parent-component :class="{'error': hasEmitted}">
-  <child-a @error="hasEmitted=true" />
-  <child-b @error="hasEmitted=true" />
+<parent-component :class="{'error': hasError}">
+  <child-a onError="() => hasError=true" />
+  <child-b onError="() => hasError=true" />
 </parent-component>
 ```
 

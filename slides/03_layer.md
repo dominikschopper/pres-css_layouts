@@ -55,9 +55,9 @@ use the `layer(name)` function
 ---
 
 **Benefits:**
-- Specificity becomes irrelevant
-- Clear architecture layers
-- overwriting is getting easier
+- clear architectural layers
+- no specificity issues
+- overwriting styles is easier
 
 ---
 
